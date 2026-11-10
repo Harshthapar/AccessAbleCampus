@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+}
+
+/* Accessibility settings styling */
+.text-size-sm {
+  font-size: 0.875rem !important;
+}
+
+.text-size-base {
+  font-size: 1rem !important;
+}
+
+.text-size-lg {
+  font-size: 1.125rem !important;
+}
+
+.text-size-xl {
+  font-size: 1.25rem !important;
+}
+
+/* High Contrast Mode */
+.high-contrast {
+  --tw-bg-opacity: 1 !important;
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+.high-contrast .bg-white,
+.high-contrast .bg-slate-50,
+.high-contrast .bg-slate-100 {
+  background-color: #121212 !important;
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+
+.high-contrast .border,
+.high-contrast .border-slate-200,
+.high-contrast .border-slate-100 {
+  border-color: #e2e8f0 !important;
+}
+
+.high-contrast a,
+.high-contrast button {
+  outline: 2px solid transparent;
+}
+
+.high-contrast button:focus-visible,
+.high-contrast a:focus-visible {
+  outline: 3px solid #facc15 !important;
+}
+
+/* Reduced motion */
+.reduced-motion * {
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001ms !important;
+}
+
+/* Leaflet map custom tweaks */
+.leaflet-popup-content-wrapper {
+  border-radius: 12px;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  padding: 0;
+  overflow: hidden;
+}
+
+.leaflet-popup-content {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.custom-marker-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.custom-marker-icon:hover {
+  transform: scale(1.15);
+}
+
